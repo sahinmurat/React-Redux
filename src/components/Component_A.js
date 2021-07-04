@@ -18,7 +18,7 @@ function Component_A() {
             <p>{user}</p>
             <button onClick={() => dispatch({ type: "INCREASE_COUNTER" })}>Increase</button>
             <button onClick={() => dispatch({ type: "DECREASE_COUNTER" })}>Decrease</button>
-            <button onClick={() => dispatch({ type: "CHANGE_NAME" , payload :{ userName : {user}}})}>Change Nmae</button>
+            <button onClick={() => dispatch({ type: "CHANGE_NAME" , payload :{ userName : user}})}>Change Name</button>
         </div>
     )
 }
