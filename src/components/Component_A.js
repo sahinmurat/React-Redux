@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 
 function Component_A() {
@@ -7,18 +7,18 @@ function Component_A() {
     const dispatch = useDispatch();
     const [user, setUser] = useState('murat')
 
-    console.log('userName',user)
+    console.log('userName', user)
 
     return (
-        <div>
+        <div style={{ border: '2px solid red' }}>
             <h3>Component A</h3>
             <p>Counter: {myCounter}</p>
             <p>Name : {name}</p>
-            <input type="text" name="userName" id="userName" onChange={e =>setUser(e.target.value) }/>
+            <input type="text" name="userName" id="userName" onChange={e => setUser(e.target.value)} />
             <p>{user}</p>
             <button onClick={() => dispatch({ type: "INCREASE_COUNTER" })}>Increase</button>
             <button onClick={() => dispatch({ type: "DECREASE_COUNTER" })}>Decrease</button>
-            <button onClick={() => dispatch({ type: "CHANGE_NAME" , payload :{ userName : user}})}>Change Name</button>
+            <button onClick={() => dispatch({ type: "CHANGE_NAME", payload: { userName: user } })}>Change Name</button>
         </div>
     )
 }
